@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder's Office Associate — Neuroid</title>
+  <meta name="description" content="The wildcard role. Work directly with the founder at Neuroid — ops, AI workflows, content, the works. New Delhi, hybrid, full-time." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #111111;
+      --bg-card-2: #141414;
+      --border: #1f1f1f;
+      --border-strong: #2a2a2a;
+      --text: #f4f4f4;
+      --text-dim: #9a9a9a;
+      --text-faint: #6a6a6a;
+      --accent: #e8ff47;
+      --accent-soft: rgba(232, 255, 71, 0.12);
+      --danger: #ff6b6b;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { background: var(--bg); color: var(--text); }
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ TOPBAR ============ */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.18em;
+      color: var(--text);
+    }
+    .now-hiring-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 999px;
+    }
+    .now-hiring-tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #0a0a0a;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+    /* ============ HERO ============ */
+    .hero { padding: 72px 0 48px; position: relative; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      width: 600px; height: 600px;
+      transform: translate(-50%, -40%);
+      background: radial-gradient(circle, var(--accent-soft) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero .container { position: relative; z-index: 1; }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+    }
+    .badge .dot { color: var(--accent); }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    h1 .accent { color: var(--accent); }
+    h1 .strike { font-style: italic; color: var(--text-dim); }
+
+    .lede {
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--text-dim);
+      max-width: 640px;
+      margin-bottom: 32px;
+    }
+    .lede strong { color: var(--text); font-weight: 500; }
+
+    .meta-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+    .chip .ico { color: var(--accent); }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      background: var(--accent);
+      color: #0a0a0a;
+      border: none;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .cta:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px -10px var(--accent-soft);
+    }
+    .cta-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+    }
+    .cta-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ============ CONTENT CARDS ============ */
+    .content { padding: 24px 0 64px; }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 32px 28px;
+      margin-bottom: 18px;
+    }
+    .card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .card h2::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .card p { color: var(--text-dim); margin-bottom: 12px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card p strong { color: var(--text); font-weight: 500; }
+
+    .card ul { list-style: none; padding: 0; }
+    .card ul li {
+      position: relative;
+      padding: 10px 0 10px 28px;
+      color: var(--text-dim);
+      border-bottom: 1px dashed var(--border);
+      line-height: 1.55;
+    }
+    .card ul li:last-child { border-bottom: none; }
+    .card ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .brand-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .brand-list span {
+      padding: 6px 12px;
+      background: var(--bg-card-2);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ============ APPLY FORM ============ */
+    .apply { padding: 56px 0 96px; }
+    .apply-header { margin-bottom: 36px; text-align: left; }
+    .apply-header h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(32px, 5vw, 48px);
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .apply-header h2 .accent { color: var(--accent); }
+    .apply-header p { color: var(--text-dim); font-size: 17px; max-width: 580px; }
+
+    .form-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 18px;
+    }
+    .form-section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .section-meta { flex: 1; }
+    .section-meta h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .section-meta .section-sub {
+      font-size: 14px;
+      color: var(--text-faint);
+    }
+
+    .field-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .field label .req { color: var(--accent); margin-left: 2px; }
+    .field label .hint { color: var(--text-faint); font-weight: 400; font-size: 13px; margin-left: 6px; }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #0d0d0d;
+    }
+    .field textarea {
+      min-height: 110px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+    .field input::placeholder, .field textarea::placeholder { color: var(--text-faint); }
+
+    .field select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%239a9a9a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 38px;
+    }
+
+    .submit-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .submit-btn {
+      padding: 16px 28px;
+      background: var(--accent);
+      color: #0a0a0a;
+      border: none;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px -10px var(--accent-soft);
+    }
+    .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .submit-note { font-size: 13px; color: var(--text-faint); }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-faint);
+      font-size: 14px;
+    }
+    footer .brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--text-dim);
+    }
+
+    /* ============ TOAST ============ */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translate(-50%, 120px);
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      z-index: 200;
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      pointer-events: none;
+      max-width: 92vw;
+      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.8);
+    }
+    .toast.show { transform: translate(-50%, 0); }
+    .toast.error { border-color: var(--danger); color: var(--danger); }
+
+    /* ============ SUCCESS OVERLAY ============ */
+    .success-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 300;
+      padding: 24px;
+    }
+    .success-overlay.show { display: flex; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .success-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    .success-check {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .success-card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .success-card p { color: var(--text-dim); margin-bottom: 24px; }
+    .success-card .close-btn {
+      padding: 12px 22px;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+    }
+    .success-card .close-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ============ MOBILE ============ */
+    @media (max-width: 640px) {
+      .container { padding: 0 18px; }
+      .hero { padding: 48px 0 32px; }
+      .card, .form-section { padding: 24px 22px; }
+      .field-group { grid-template-columns: 1fr; }
+      .topbar-inner { padding: 14px 18px; }
+      .now-hiring-tag { font-size: 10px; padding: 5px 10px; }
+      .form-section-head { flex-direction: row; gap: 12px; }
+      .section-num { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="logo">NEUROID</div>
+      <span class="now-hiring-tag">Now Hiring</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge"><span class="dot">●</span> Founder's Office · Associate</span>
+      <h1>The <span class="accent">wildcard</span> role.<br/>Made for someone who opens 14 Claude tabs <span class="strike">for fun</span>.</h1>
+      <p class="lede">
+        Work directly with the founder at Neuroid. Compress the learning curve. Run experiments. Manage operations. Be the person who <strong>actually makes things happen</strong> — somewhere between an EA, a chief-of-staff, an automation builder, and a content sidekick.
+      </p>
+      <div class="meta-chips">
+        <span class="chip"><span class="ico">📍</span> New Delhi · Hybrid, on-site</span>
+        <span class="chip"><span class="ico">⏳</span> 1–3 yrs · curiosity &gt; resume</span>
+        <span class="chip"><span class="ico">⚡</span> Full-time</span>
+      </div>
+      <div class="cta-row">
+        <a href="#apply" class="cta">Apply now <span>→</span></a>
+        <a href="#about" class="cta cta-secondary">Read the role first</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content" id="about">
+    <div class="container">
+
+      <article class="card">
+        <h2>The Gist</h2>
+        <p>
+          This is the <strong>wildcard role</strong>. You'll work directly with the founder to compress the learning curve, run experiments, manage operations, and basically be the person who makes things happen.
+        </p>
+        <p>
+          If you open 14 Claude tabs for fun and get excited about AI agents, automations, and workflows — keep reading. If you've ever fixed something nobody asked you to fix, even better.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>About Neuroid</h2>
+        <p>
+          Neuroid is a <strong>growth studio for D2C operators</strong> — catalyzing transformative partnerships. A full-funnel growth partner helping brands scale with performance marketing, ad commercials &amp; brand campaigns, UGC and performance creatives, CRO, and retention.
+        </p>
+        <p>We've worked with brands like:</p>
+        <div class="brand-list">
+          <span>Lifelong</span>
+          <span>Woodenstreet</span>
+          <span>Kisah</span>
+          <span>Superbottoms</span>
+          <span>Yoho</span>
+          <span>Jewelsmars</span>
+          <span>Silverfied</span>
+          <span>NourishYou</span>
+          <span>DeepImpact</span>
+          <span>Truth&amp;Hair</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>What you'll do</h2>
+        <ul>
+          <li>Support the founder across operations, finance, content, and strategic initiatives.</li>
+          <li>Build, test, and deploy <strong>AI workflows, automations, agents, and bots</strong> — we live in the Claude / n8n / Zapier ecosystem.</li>
+          <li>Help manage day-to-day ops and finance — vendors, invoicing, basic books, internal coordination.</li>
+          <li>Help strategize and execute the founder's personal content — including being on shoots.</li>
+          <li>Run research projects, summarize them, and present findings clearly.</li>
+          <li>Basically: <strong>learn fast, then teach me what you learned.</strong></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>What we're looking for</h2>
+        <ul>
+          <li>Genuinely curious — about AI, business, marketing, content, everything.</li>
+          <li>Comfortable with operations and finance basics.</li>
+          <li>Strong written communication (you'll summarize a lot).</li>
+          <li>Self-starter energy — we don't want to micromanage.</li>
+          <li>Bias toward action over overthinking.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Bonus points</h2>
+        <ul>
+          <li>Hands-on experience with Claude, ChatGPT, n8n, Zapier, Make, or any agent / automation tools.</li>
+          <li>Understanding of marketing, performance, or content (any one is fine).</li>
+          <li>Comfortable on or around a camera for shoots.</li>
+          <li>Have built something on the side — a project, a tool, a Notion system, anything.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section class="apply" id="apply">
+    <div class="container">
+
+      <div class="apply-header">
+        <h2>Apply <span class="accent">now</span> if this role feels made for you.</h2>
+        <p>Four short sections. Be specific, be honest, be you. We read everything — really.</p>
+      </div>
+
+      <form id="application-form" novalidate>
+
+        <!-- SECTION 01 -->
+        <div class="form-section">
+          <div class="form-section-head">
+            <div class="section-num">01</div>
+            <div class="section-meta">
+              <h3>The basics</h3>
+              <div class="section-sub">The boring-but-necessary stuff.</div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field full">
+              <label for="fullName">Full name <span class="req">*</span></label>
+              <input id="fullName" name="fullName" type="text" placeholder="e.g. Riya Mehta" required />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="hint">(WhatsApp helps)</span></label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 98xxxxxxxx" />
+            </div>
+            <div class="field">
+              <label for="location">Current city <span class="req">*</span></label>
+              <input id="location" name="location" type="text" placeholder="e.g. New Delhi" required />
+            </div>
+            <div class="field">
+              <label for="linkedin">LinkedIn URL <span class="req">*</span></label>
+              <input id="linkedin" name="linkedin" type="url" placeholder="https://linkedin.com/in/…" required />
+            </div>
+            <div class="field full">
+              <label for="portfolio">Portfolio / personal site <span class="hint">(optional, but flex it)</span></label>
+              <input id="portfolio" name="portfolio" type="url" placeholder="https://…" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 02 -->
+        <div class="form-section">
+          <div class="form-section-head">
+            <div class="section-num">02</div>
+            <div class="section-meta">
+              <h3>Where you've been</h3>
+              <div class="section-sub">A quick lay of the land.</div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field">
+              <label for="experience">Years of experience <span class="req">*</span></label>
+              <select id="experience" name="experience" required>
+                <option value="">Select…</option>
+                <option>0–1 (fresh, hungry)</option>
+                <option>1–2</option>
+                <option>2–3</option>
+                <option>3+ (still curious, not jaded)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="noticePeriod">Notice period</label>
+              <input id="noticePeriod" name="noticePeriod" type="text" placeholder="e.g. Immediate / 30 days" />
+            </div>
+            <div class="field">
+              <label for="currentRole">Current role</label>
+              <input id="currentRole" name="currentRole" type="text" placeholder="e.g. Marketing Associate" />
+            </div>
+            <div class="field">
+              <label for="currentCompany">Current company</label>
+              <input id="currentCompany" name="currentCompany" type="text" placeholder="e.g. Self / freelance / company" />
+            </div>
+            <div class="field full">
+              <label for="resumeLink">Resume link <span class="req">*</span> <span class="hint">(Drive, Dropbox, Notion — anything we can open)</span></label>
+              <input id="resumeLink" name="resumeLink" type="url" placeholder="https://…" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 03 -->
+        <div class="form-section">
+          <div class="form-section-head">
+            <div class="section-num">03</div>
+            <div class="section-meta">
+              <h3>Brain ticklers</h3>
+              <div class="section-sub">This is the part that actually decides things. Don't phone it in.</div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field full">
+              <label for="whyFoundersOffice">Why a founder's office? Why Neuroid? <span class="req">*</span></label>
+              <textarea id="whyFoundersOffice" name="whyFoundersOffice" placeholder="Don't sell us. Tell us." required></textarea>
+            </div>
+            <div class="field full">
+              <label for="aiTools">Which AI tools have you actually used — and what have you built with them? <span class="req">*</span></label>
+              <textarea id="aiTools" name="aiTools" placeholder="Claude, ChatGPT, n8n, Zapier, Make, Cursor, Lovable… name names. Then tell us what you've actually shipped with them — automation, workflow, bot, agent, Notion system, side project, anything." required></textarea>
+            </div>
+            <div class="field full">
+              <label for="wildestSystem">The wildest workflow / system / project you've shipped <span class="req">*</span></label>
+              <textarea id="wildestSystem" name="wildestSystem" placeholder="Big or small. Personal or work. Just — concretely, what did you build, what did it do, and what broke along the way?" required></textarea>
+            </div>
+            <div class="field full">
+              <label for="messyProblem">A messy problem you untangled (without anyone asking)</label>
+              <textarea id="messyProblem" name="messyProblem" placeholder="The kind of thing that wasn't on your job description but you fixed anyway."></textarea>
+            </div>
+            <div class="field">
+              <label for="cameraComfort">Camera-comfortable? <span class="hint">(we do shoots)</span></label>
+              <select id="cameraComfort" name="cameraComfort">
+                <option value="">Select…</option>
+                <option>Yes — give me a clip-on mic</option>
+                <option>Off-camera, but happy on set / behind the camera</option>
+                <option>Not yet, but willing to learn</option>
+                <option>Hard no</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="pitchLines">Pitch yourself in 2 lines <span class="req">*</span></label>
+              <input id="pitchLines" name="pitchLines" type="text" placeholder="Two lines. Make them count." required />
+            </div>
+            <div class="field full">
+              <label for="hiddenSuperpower">Something a CV won't tell us about you</label>
+              <textarea id="hiddenSuperpower" name="hiddenSuperpower" placeholder="A weirdly specific obsession, a side hustle, a skill you picked up for fun. Anything."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 04 -->
+        <div class="form-section">
+          <div class="form-section-head">
+            <div class="section-num">04</div>
+            <div class="section-meta">
+              <h3>Logistics &amp; intent</h3>
+              <div class="section-sub">Last lap. Promise.</div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="field full">
+              <label for="opsFinanceComfort">Are you comfortable with ops &amp; finance basics? <span class="hint">(invoicing, vendors, basic books, coordination)</span></label>
+              <textarea id="opsFinanceComfort" name="opsFinanceComfort" placeholder="A line or two on what you've handled before — even if it was just for a side project."></textarea>
+            </div>
+            <div class="field">
+              <label for="hybridOk">Hybrid in New Delhi — okay? <span class="req">*</span></label>
+              <select id="hybridOk" name="hybridOk" required>
+                <option value="">Select…</option>
+                <option>Yes — I'm in Delhi / NCR</option>
+                <option>Yes — I'll relocate</option>
+                <option>Hybrid only if remote-leaning</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="startDate">Earliest start date</label>
+              <input id="startDate" name="startDate" type="text" placeholder="e.g. Immediately / 15 June" />
+            </div>
+            <div class="field">
+              <label for="expectedCtc">Expected CTC <span class="hint">(annual, INR)</span></label>
+              <input id="expectedCtc" name="expectedCtc" type="text" placeholder="e.g. ₹6–8 LPA" />
+            </div>
+            <div class="field">
+              <label for="howFound">How did you find this role?</label>
+              <input id="howFound" name="howFound" type="text" placeholder="LinkedIn, friend, X, reading our newsletter at 2am…" />
+            </div>
+            <div class="field full">
+              <label for="anythingElse">Anything else you want us to know?</label>
+              <textarea id="anythingElse" name="anythingElse" placeholder="Optional. Brag, confess, link a thing — your call."></textarea>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="submit-btn" id="submit-btn">Send it <span>→</span></button>
+            <span class="submit-note">We read every application. If you're a fit, you'll hear back within ~10 days.</span>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="brand">NEUROID</div>
+      <div style="margin-top: 8px;">© <span id="year"></span> Neuroid · Built fast, on purpose.</div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="success-overlay" role="dialog" aria-modal="true">
+    <div class="success-card">
+      <div class="success-check">✓</div>
+      <h2>Got it.</h2>
+      <p>Your application is in. We read every one. If you're a fit, you'll hear back within ~10 days — keep an eye on your inbox (and your spam folder, just in case).</p>
+      <button class="close-btn" id="success-close">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // ⚠️ PASTE YOUR APPS SCRIPT WEB APP URL HERE AFTER DEPLOYING (see README.md)
+    const APPS_SCRIPT_URL = 'REPLACE_WITH_YOUR_APPS_SCRIPT_WEB_APP_URL';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('application-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const toast = document.getElementById('toast');
+    const overlay = document.getElementById('success-overlay');
+    const closeBtn = document.getElementById('success-close');
+
+    let toastTimer;
+    function showToast(msg, isError) {
+      clearTimeout(toastTimer);
+      toast.textContent = msg;
+      toast.classList.toggle('error', !!isError);
+      toast.classList.add('show');
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    function showSuccess() {
+      overlay.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    function hideSuccess() {
+      overlay.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    closeBtn.addEventListener('click', hideSuccess);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) hideSuccess(); });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Native required-validation w/ a friendlier toast
+      if (!form.checkValidity()) {
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid) {
+          firstInvalid.focus();
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        showToast('A few required fields need your attention.', true);
+        return;
+      }
+
+      if (APPS_SCRIPT_URL === 'REPLACE_WITH_YOUR_APPS_SCRIPT_WEB_APP_URL') {
+        showToast('Form is not wired up yet. Set APPS_SCRIPT_URL.', true);
+        return;
+      }
+
+      submitBtn.disabled = true;
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending…';
+
+      try {
+        const data = new FormData(form);
+        const params = new URLSearchParams();
+        for (const [k, v] of data.entries()) params.append(k, v);
+
+        await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+          body: params.toString()
+        });
+
+        // no-cors: we can't read the response, but if the network call didn't throw, treat as success.
+        form.reset();
+        showSuccess();
+        showToast('Application sent. Welcome to the wildcard pile.');
+      } catch (err) {
+        console.error(err);
+        showToast('Something broke on our end. Try again, or email us.', true);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    });
+  </script>
+
+</body>
+</html>
