@@ -601,8 +601,8 @@
 
           <div class="field-group">
             <div class="field full">
-              <label for="fullName">Full name <span class="req">*</span></label>
-              <input id="fullName" name="fullName" type="text" placeholder="e.g. Riya Mehta" required />
+              <label for="full_name">Full name <span class="req">*</span></label>
+              <input id="full_name" name="full_name" type="text" placeholder="e.g. Riya Mehta" required />
             </div>
             <div class="field">
               <label for="email">Email <span class="req">*</span></label>
@@ -613,8 +613,8 @@
               <input id="phone" name="phone" type="tel" placeholder="+91 98xxxxxxxx" />
             </div>
             <div class="field">
-              <label for="location">Current city <span class="req">*</span></label>
-              <input id="location" name="location" type="text" placeholder="e.g. New Delhi" required />
+              <label for="city">Current city <span class="req">*</span></label>
+              <input id="city" name="city" type="text" placeholder="e.g. New Delhi" required />
             </div>
             <div class="field">
               <label for="linkedin">LinkedIn URL <span class="req">*</span></label>
@@ -649,20 +649,20 @@
               </select>
             </div>
             <div class="field">
-              <label for="noticePeriod">Notice period</label>
-              <input id="noticePeriod" name="noticePeriod" type="text" placeholder="e.g. Immediate / 30 days" />
+              <label for="notice_period">Notice period</label>
+              <input id="notice_period" name="notice_period" type="text" placeholder="e.g. Immediate / 30 days" />
             </div>
             <div class="field">
-              <label for="currentRole">Current role</label>
-              <input id="currentRole" name="currentRole" type="text" placeholder="e.g. Marketing Associate" />
+              <label for="current_role">Current role</label>
+              <input id="current_role" name="current_role" type="text" placeholder="e.g. Marketing Associate" />
             </div>
             <div class="field">
-              <label for="currentCompany">Current company</label>
-              <input id="currentCompany" name="currentCompany" type="text" placeholder="e.g. Self / freelance / company" />
+              <label for="current_company">Current company</label>
+              <input id="current_company" name="current_company" type="text" placeholder="e.g. Self / freelance / company" />
             </div>
             <div class="field full">
-              <label for="resumeLink">Resume link <span class="req">*</span> <span class="hint">(Drive, Dropbox, Notion — anything we can open)</span></label>
-              <input id="resumeLink" name="resumeLink" type="url" placeholder="https://…" required />
+              <label for="resume">Resume link <span class="req">*</span> <span class="hint">(Drive, Dropbox, Notion — anything we can open)</span></label>
+              <input id="resume" name="resume" type="url" placeholder="https://…" required />
             </div>
           </div>
         </div>
@@ -679,24 +679,20 @@
 
           <div class="field-group">
             <div class="field full">
-              <label for="whyFoundersOffice">Why a founder's office? Why Neuroid? <span class="req">*</span></label>
-              <textarea id="whyFoundersOffice" name="whyFoundersOffice" placeholder="Don't sell us. Tell us." required></textarea>
+              <label for="why_founders_office">Why a founder's office? Why Neuroid? <span class="req">*</span></label>
+              <textarea id="why_founders_office" name="why_founders_office" placeholder="Don't sell us. Tell us." required></textarea>
             </div>
             <div class="field full">
-              <label for="aiTools">Which AI tools have you actually used — and what have you built with them? <span class="req">*</span></label>
-              <textarea id="aiTools" name="aiTools" placeholder="Claude, ChatGPT, n8n, Zapier, Make, Cursor, Lovable… name names. Then tell us what you've actually shipped with them — automation, workflow, bot, agent, Notion system, side project, anything." required></textarea>
+              <label for="ai_tools">Which AI tools have you actually used — and what have you built with them? <span class="req">*</span></label>
+              <textarea id="ai_tools" name="ai_tools" placeholder="Claude, ChatGPT, n8n, Zapier, Make, Cursor, Lovable… name names. Then tell us what you've actually shipped with them — automation, workflow, bot, agent, Notion system, side project, anything." required></textarea>
             </div>
             <div class="field full">
-              <label for="wildestSystem">The wildest workflow / system / project you've shipped <span class="req">*</span></label>
-              <textarea id="wildestSystem" name="wildestSystem" placeholder="Big or small. Personal or work. Just — concretely, what did you build, what did it do, and what broke along the way?" required></textarea>
-            </div>
-            <div class="field full">
-              <label for="messyProblem">A messy problem you untangled (without anyone asking)</label>
-              <textarea id="messyProblem" name="messyProblem" placeholder="The kind of thing that wasn't on your job description but you fixed anyway."></textarea>
+              <label for="wildest_system">The wildest workflow / system / project you've shipped <span class="req">*</span></label>
+              <textarea id="wildest_system" name="wildest_system" placeholder="Big or small. Personal or work. Just — concretely, what did you build, what did it do, and what broke along the way?" required></textarea>
             </div>
             <div class="field">
-              <label for="cameraComfort">Camera-comfortable? <span class="hint">(we do shoots)</span></label>
-              <select id="cameraComfort" name="cameraComfort">
+              <label for="camera_comfort">Camera-comfortable? <span class="hint">(we do shoots)</span></label>
+              <select id="camera_comfort" name="camera_comfort">
                 <option value="">Select…</option>
                 <option>Yes — give me a clip-on mic</option>
                 <option>Off-camera, but happy on set / behind the camera</option>
@@ -705,12 +701,12 @@
               </select>
             </div>
             <div class="field">
-              <label for="pitchLines">Pitch yourself in 2 lines <span class="req">*</span></label>
-              <input id="pitchLines" name="pitchLines" type="text" placeholder="Two lines. Make them count." required />
+              <label for="pitch">Pitch yourself in 2 lines <span class="req">*</span></label>
+              <input id="pitch" name="pitch" type="text" placeholder="Two lines. Make them count." required />
             </div>
             <div class="field full">
-              <label for="hiddenSuperpower">Something a CV won't tell us about you</label>
-              <textarea id="hiddenSuperpower" name="hiddenSuperpower" placeholder="A weirdly specific obsession, a side hustle, a skill you picked up for fun. Anything."></textarea>
+              <label for="standout">Something a CV won't tell us about you</label>
+              <textarea id="standout" name="standout" placeholder="A weirdly specific obsession, a side hustle, a skill you picked up for fun. Anything."></textarea>
             </div>
           </div>
         </div>
@@ -727,12 +723,12 @@
 
           <div class="field-group">
             <div class="field full">
-              <label for="opsFinanceComfort">Are you comfortable with ops &amp; finance basics? <span class="hint">(invoicing, vendors, basic books, coordination)</span></label>
-              <textarea id="opsFinanceComfort" name="opsFinanceComfort" placeholder="A line or two on what you've handled before — even if it was just for a side project."></textarea>
+              <label for="ops_finance_comfort">Are you comfortable with ops &amp; finance basics? <span class="hint">(invoicing, vendors, basic books, coordination)</span></label>
+              <textarea id="ops_finance_comfort" name="ops_finance_comfort" placeholder="A line or two on what you've handled before — even if it was just for a side project."></textarea>
             </div>
             <div class="field">
-              <label for="hybridOk">Hybrid in New Delhi — okay? <span class="req">*</span></label>
-              <select id="hybridOk" name="hybridOk" required>
+              <label for="wfo_delhi">Hybrid in New Delhi — okay? <span class="req">*</span></label>
+              <select id="wfo_delhi" name="wfo_delhi" required>
                 <option value="">Select…</option>
                 <option>Yes — I'm in Delhi / NCR</option>
                 <option>Yes — I'll relocate</option>
@@ -741,20 +737,20 @@
               </select>
             </div>
             <div class="field">
-              <label for="startDate">Earliest start date</label>
-              <input id="startDate" name="startDate" type="text" placeholder="e.g. Immediately / 15 June" />
+              <label for="start_date">Earliest start date</label>
+              <input id="start_date" name="start_date" type="text" placeholder="e.g. Immediately / 15 June" />
             </div>
             <div class="field">
-              <label for="expectedCtc">Expected CTC <span class="hint">(annual, INR)</span></label>
-              <input id="expectedCtc" name="expectedCtc" type="text" placeholder="e.g. ₹6–8 LPA" />
+              <label for="expected_ctc">Expected CTC <span class="hint">(annual, INR)</span></label>
+              <input id="expected_ctc" name="expected_ctc" type="text" placeholder="e.g. ₹6–8 LPA" />
             </div>
             <div class="field">
-              <label for="howFound">How did you find this role?</label>
-              <input id="howFound" name="howFound" type="text" placeholder="LinkedIn, friend, X, reading our newsletter at 2am…" />
+              <label for="how_found">How did you find this role?</label>
+              <input id="how_found" name="how_found" type="text" placeholder="LinkedIn, friend, X, reading our newsletter at 2am…" />
             </div>
             <div class="field full">
-              <label for="anythingElse">Anything else you want us to know?</label>
-              <textarea id="anythingElse" name="anythingElse" placeholder="Optional. Brag, confess, link a thing — your call."></textarea>
+              <label for="additional_info">Anything else you want us to know?</label>
+              <textarea id="additional_info" name="additional_info" placeholder="Optional. Brag, confess, link a thing — your call."></textarea>
             </div>
           </div>
 
@@ -847,6 +843,7 @@
       try {
         const data = new FormData(form);
         const params = new URLSearchParams();
+        params.append('timestamp', new Date().toISOString());
         for (const [k, v] of data.entries()) params.append(k, v);
 
         await fetch(APPS_SCRIPT_URL, {
